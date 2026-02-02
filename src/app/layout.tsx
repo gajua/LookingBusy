@@ -114,6 +114,7 @@ export default function RootLayout({
         <meta name="geo.region" content="KR" />
         <meta name="rating" content="general" />
         <meta name="referrer" content="origin-when-cross-origin" />
+        <meta name="naver-site-verification" content="fd65643dea872805e964254f6b839d01e1a19591" />
       </head>
       <body className={inter.className}>
         {children}

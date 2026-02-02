@@ -17,7 +17,7 @@ export function LookingBusyLogo() {
         <div className="flex items-center gap-2">
           <h1 className="text-4xl text-yellow-400 tracking-tight">월급 루팡</h1>
         </div>
-        <div className="text-xs text-yellow-400/40 tracking-wider uppercase" aria-label="부제목">월급 루팡</div>
+        <div className="text-xs text-yellow-400/40 tracking-wider uppercase" aria-label="부제목">Looking busy</div>
       </div>
     </div>
   );

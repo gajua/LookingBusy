@@ -3,6 +3,7 @@
 import { useMemo } from 'react';
 import { GameCard } from "@/components/game-card";
 import { LookingBusyLogo } from "@/components/looking-busy-logo";
+import { GameReportDialog } from "@/components/game-report-dialog";
 import { AlertCircle, Lock, Sparkles, Target, Timer } from "lucide-react";
 import gamesData from '@/../data/games.json';
 
@@ -155,12 +156,15 @@ export default function Home() {
               <AlertCircle className="w-3 h-3" />
               본 사이트 사용으로 인한 업무 효율 저하에 대해 책임지지 않습니다.
             </p>
-            <button 
-              className="text-sm text-yellow-400/60 hover:text-yellow-400 underline underline-offset-2 transition-colors"
-              onClick={() => alert('제보 기능은 준비 중입니다 😊')}
-            >
-              익명으로 게임 제보하기
-            </button>
+            <GameReportDialog
+              trigger={
+                <button 
+                  className="text-sm text-yellow-400/60 hover:text-yellow-400 underline underline-offset-2 transition-colors"
+                >
+                  익명으로 게임 제보하기
+                </button>
+              }
+            />
           </div>
           <div className="text-center text-xs text-gray-600">
             © 2026 LookingBusy. 이 사이트는 엔터테인먼트 목적입니다.
