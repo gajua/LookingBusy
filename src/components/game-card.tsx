@@ -25,7 +25,7 @@ export function GameCard({ name, description, tags, isPick = false, onClick }: G
           </div>
           {isPick && (
             <Badge variant="secondary" className="bg-yellow-400/20 text-yellow-300 border-yellow-400/30 shrink-0" aria-label="오늘의 추천 게임">
-              Today's Pick
+              Today&apos;s Pick
             </Badge>
           )}
         </div>

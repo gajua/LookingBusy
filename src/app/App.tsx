@@ -139,7 +139,7 @@ export default function App() {
                 <Sparkles className="w-5 h-5 text-yellow-400" />
                 <span className="text-yellow-400 tracking-wide">오늘의 추천</span>
               </div>
-              <h2 className="text-white mb-1">Today's Pick</h2>
+              <h2 className="text-white mb-1">Today&apos;s Pick</h2>
               <p className="text-sm text-gray-400">
                 오늘 하루 딱 이거 하나면 충분합니다
               </p>

@@ -6,6 +6,8 @@ import { LookingBusyLogo } from "@/components/looking-busy-logo";
 import { AlertCircle, Lock, Sparkles, Target, Timer } from "lucide-react";
 import gamesData from '@/../data/games.json';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app';
+
 interface Game {
   id: string;
   name: string;
@@ -82,7 +84,7 @@ export default function Home() {
                   <Sparkles className="w-5 h-5 text-yellow-400" />
                   <span className="text-yellow-400 tracking-wide">오늘의 추천</span>
                 </div>
-                <h2 className="text-white mb-1" lang="en">Today's Pick</h2>
+                <h2 className="text-white mb-1" lang="en">Today&apos;s Pick</h2>
                 <p className="text-sm text-gray-400">
                   오늘 하루 딱 이거 하나면 충분합니다
                 </p>
@@ -176,7 +178,7 @@ export default function Home() {
             name: '월급 루팡',
             alternateName: 'LookingBusy',
             description: '회사에서 가장 효율적으로 시간을 훔치는 방법. 내기용 간단한 게임부터 시간 보내기 좋은 게임까지, 다양한 무료 온라인 게임을 제공합니다.',
-            url: process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app',
+            url: siteUrl,
             inLanguage: 'ko-KR',
             isAccessibleForFree: true,
             genre: '게임',
@@ -185,7 +187,7 @@ export default function Home() {
               '@type': 'SearchAction',
               target: {
                 '@type': 'EntryPoint',
-                urlTemplate: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app'}/search?q={search_term_string}`,
+                urlTemplate: `${siteUrl}/search?q={search_term_string}`,
               },
               'query-input': 'required name=search_term_string',
             },
@@ -235,8 +237,8 @@ export default function Home() {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: '월급 루팡',
-            url: process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app',
-            logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app'}/looking-busy-logo.png`,
+            url: siteUrl,
+            logo: `${siteUrl}/looking-busy-logo.png`,
             description: '회사에서 가장 효율적으로 시간을 훔치는 방법을 제공하는 게임 플랫폼',
             sameAs: [],
           }),
