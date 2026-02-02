@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
+        url: '/looking-busy-logo.png',
+        width: 512,
+        height: 512,
         alt: siteName,
         type: 'image/png',
       },
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${siteName} - 회사에서 가장 효율적으로 시간을 훔치는 방법`,
     description: siteDescription,
-    images: ['/og-image.png'],
+    images: ['/looking-busy-logo.png'],
   },
   robots: {
     index: true,
@@ -101,8 +101,10 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href={siteUrl} />
         <meta name="theme-color" content="#000000" />

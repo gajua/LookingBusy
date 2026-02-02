@@ -236,7 +236,7 @@ export default function Home() {
             '@type': 'Organization',
             name: '월급 루팡',
             url: process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app',
-            logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app'}/og-image.png`,
+            logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app'}/looking-busy-logo.png`,
             description: '회사에서 가장 효율적으로 시간을 훔치는 방법을 제공하는 게임 플랫폼',
             sameAs: [],
           }),
