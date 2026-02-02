@@ -32,6 +32,11 @@ export async function POST(request: NextRequest) {
     const resendApiKey = process.env.RESEND_API_KEY;
     const fromEmail = process.env.RESEND_FROM_EMAIL || DEFAULT_FROM;
 
+    // 배포 환경 디버깅: Vercel 로그에서 확인 가능
+    if (!resendApiKey) {
+      console.warn('[report-game] RESEND_API_KEY가 설정되지 않았습니다. Vercel 대시보드 → Settings → Environment Variables에서 Production에 추가하세요.');
+    }
+
     if (resendApiKey) {
       const resendResponse = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -60,7 +65,7 @@ export async function POST(request: NextRequest) {
 
       if (!resendResponse.ok) {
         const errorData = await resendResponse.json().catch(() => ({}));
-        console.error('Resend API error:', resendResponse.status, errorData);
+        console.error('[report-game] Resend API 실패:', resendResponse.status, JSON.stringify(errorData));
         // 이메일 전송 실패해도 제보는 접수된 것으로 처리 (500 대신 200)
         return NextResponse.json(
           {
@@ -72,9 +77,9 @@ export async function POST(request: NextRequest) {
       }
 
       const resendData = await resendResponse.json();
-      console.log('Email sent successfully:', resendData);
+      console.log('[report-game] 이메일 전송 성공:', resendData.id ?? 'ok');
     } else {
-      console.log('Resend API key not set. Game report logged:', { gameName, gameUrl, description });
+      console.log('[report-game] API 키 없음, 제보만 로그에 기록:', { gameName, gameUrl, description });
     }
 
     return NextResponse.json(

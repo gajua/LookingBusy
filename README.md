@@ -115,11 +115,25 @@ LookingBusy/
 
 ## 환경 변수
 
-`.env.local` 파일을 생성하여 다음 변수를 설정할 수 있습니다:
+`.env` 또는 `.env.local` 파일을 생성하여 다음 변수를 설정할 수 있습니다:
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
+RESEND_API_KEY=re_xxxx   # 게임 제보 이메일 전송 (Resend 발급)
 ```
+
+### Vercel 배포 시 (프로덕션에서 메일이 안 올 때)
+
+**로컬에서는 메일이 오는데, 배포 후 프로덕션에서는 안 오는 경우** → Vercel에 환경 변수가 없을 가능성이 큽니다.
+
+1. [Vercel 대시보드](https://vercel.com) → 해당 프로젝트 선택
+2. **Settings** → **Environment Variables**
+3. 아래 변수 추가 후 **Production**(필수), **Preview**(선택) 체크
+   - **Name**: `RESEND_API_KEY`
+   - **Value**: Resend에서 발급한 API 키 (`re_` 로 시작)
+4. 저장 후 **Redeploy** (Deployments → 최신 배포 → ⋮ → Redeploy)
+
+배포 후에도 메일이 안 오면 Vercel **Logs** (프로젝트 → Logs)에서 `[report-game]` 로 검색해 Resend API 실패 사유를 확인하세요.
 
 ## 라이선스
 
