@@ -61,10 +61,10 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: '/looking-busy-logo.png',
-        width: 512,
-        height: 512,
-        alt: siteName,
+        url: '/looking-busy-og.png',
+        width: 1200,
+        height: 630,
+        alt: `${siteName} - 직장인을 위한 킬링 타임 공간`,
         type: 'image/png',
       },
     ],
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${siteName} - 회사에서 가장 효율적으로 시간을 훔치는 방법`,
     description: siteDescription,
-    images: ['/looking-busy-logo.png'],
+    images: ['/looking-busy-og.png'],
   },
   robots: {
     index: true,
