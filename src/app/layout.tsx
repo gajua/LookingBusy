@@ -5,7 +5,7 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://looking-busy.vercel.app';
 const siteName = '월급 루팡';
 const siteDescription = '회사에서 가장 효율적으로 시간을 훔치는 방법. 내기용 간단한 게임부터 시간 보내기 좋은 게임까지, 다양한 무료 온라인 게임을 제공합니다.';
 const siteKeywords = [
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: '/looking-busy-og.png',
+        url: `${siteUrl}/looking-busy-og.png`,
         width: 1200,
         height: 630,
         alt: `${siteName} - 직장인을 위한 킬링 타임 공간`,
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${siteName} - 회사에서 가장 효율적으로 시간을 훔치는 방법`,
     description: siteDescription,
-    images: ['/looking-busy-og.png'],
+    images: [`${siteUrl}/looking-busy-og.png`],
   },
   robots: {
     index: true,

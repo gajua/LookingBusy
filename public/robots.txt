@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://lookingbusy.vercel.app/sitemap.xml
+Sitemap: https://looking-busy.vercel.app/sitemap.xml

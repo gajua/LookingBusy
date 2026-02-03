@@ -7,7 +7,7 @@ import { GameReportDialog } from "@/components/game-report-dialog";
 import { AlertCircle, Lock, Sparkles, Target, Timer } from "lucide-react";
 import gamesData from '@/../data/games.json';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://looking-busy.vercel.app';
 
 interface Game {
   id: string;

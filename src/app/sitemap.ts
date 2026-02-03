@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lookingbusy.vercel.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://looking-busy.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
