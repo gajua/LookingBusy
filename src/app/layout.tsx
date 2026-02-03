@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
-import { Amplitude } from '@/amplitude';
+import { Mixpanel } from '@/mixpanel';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -118,7 +118,7 @@ export default function RootLayout({
         <meta name="naver-site-verification" content="fd65643dea872805e964254f6b839d01e1a19591" />
       </head>
       <body className={inter.className}>
-        <Amplitude />
+        <Mixpanel />
         {children}
         <Analytics />
       </body>
